@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>License Authentication</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0c0c0c;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .auth-box {
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    }
+    .auth-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .auth-title span {
+      color: #1DA1F2;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #333;
+      background-color: #121212;
+      color: white;
+      font-size: 15px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background-color: white;
+      color: black;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .small-text {
+      font-size: 14px;
+      margin-top: 15px;
+    }
+    .small-text a {
+      color: #1DA1F2;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="auth-box">
+    <div class="auth-title">User <span>Authentication</span></div>
+    <input type="text" id="license" placeholder="Enter License Key" required />
+    <button onclick="redirect()">LOGIN</button>
+    <div class="small-text">
+      If don't have license? <a href="https://t.me/Shadow_maxxx" target="_blank">@Shadow_maxxx</a><br>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+
+  <script>
+    function redirect() {
+      const key = document.getElementById('license').value.trim();
+      const validKey = "Shadow_paid";
+      if (key === validKey) {
+        window.location.href = "https://rad-valkyrie-cb36d6.netlify.app/";
+      } else {
+        alert("Invalid license key. Contact @Shadow_maxxx for help.");
+      }
+    }
+  </script>
+
+</body>
+</html>
